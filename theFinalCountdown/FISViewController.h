@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FISViewController : UIViewController
+int timerCounter;
+
+@interface FISViewController : UIViewController{
+    
+    IBOutlet UILabel *counter;
+    
+    NSTimer *timer;
+    
+    NSInteger afterRemainder;
+    NSInteger remainder;
+    
+    NSTimeInterval countDownInterval;
+    
+}
+
+- (void) count;
+
+- (IBAction)start:(id)sender;
+
+
 
 @end
